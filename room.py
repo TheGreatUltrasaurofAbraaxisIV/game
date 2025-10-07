@@ -36,10 +36,10 @@ class Room():
         self.item = item_name
 
     def lock(self):
-        self.locked = True
+        self.lock = True
     
-    def unlocked(self):
-        self.locked = False
+    def unlock(self):
+        self.lock = False
 
     def describe(self):
         print( self.description )

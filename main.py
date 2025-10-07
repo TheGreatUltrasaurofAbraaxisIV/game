@@ -34,17 +34,19 @@ clearing.link_room(palace, "South")
 palace.link_room(clearing, "North")
 
 cage.lock()
+forest.lock()
+clearing.lock()
 
 moly = Item("Moly")
-moly.set_description("A pink and yellow Rose with nine petals.")
+moly.set_description("a pink and yellow moly flower with nine petals.")
 clearing.set_item(moly)
 
 key = Item("key")
-key.set_description("A rusty key that shaped like a blue police box")
+key.set_description("a rusty key that shaped like a blue police box")
 shore.set_item(key)
 
 carrots = Item("Carrots")
-carrots.set_description("Hundreds of wild carrots ready for the taking")
+carrots.set_description("a bunch of wild carrots ready for the taking")
 beach.set_item(carrots)
 
 sunglasses = Item("Sunglasses")
@@ -82,6 +84,11 @@ while dead == False:
     if key in backpack:
         cage.unlock()
 
+    if sunglasses in backpack:
+        forest.unlock()
+
+
+        
     print("\n")
     current_room.get_details()
 
