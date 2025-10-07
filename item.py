@@ -20,7 +20,7 @@ class Item():
         return self.name
     
     def describe(self):
-        print( "The ["+self.name+ "] is here - " + self.description )
+        print( "There is " + self.description )
     
     
     
