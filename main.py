@@ -84,9 +84,6 @@ while dead == False:
     if key in backpack:
         cage.unlock()
 
-    if sunglasses in backpack:
-        forest.unlock()
-
 
         
     print("\n")
@@ -117,7 +114,7 @@ while dead == False:
     elif command == "Take":
         if item is not None:
             print("You put the " + item.get_name() + " in your backpack")
-            backpack.append(item.get_name())
+            backpack.append(item)
             current_room.set_item(None)
     
     elif command == "Fight":
